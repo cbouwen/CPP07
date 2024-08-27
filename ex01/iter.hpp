@@ -4,11 +4,11 @@
 #include <iostream>
 #include <string>
 
-template<typename T>
-void    iter(T* address, int length, void (*func)(T&))
+template<typename T, typename func>
+void    iter(T* address, int length, func T2)
 {
     for (int i = 0; i <length; i++)
-        func(address[i]);
+        T2(address[i]);
 }
 
 class Iter
@@ -18,17 +18,6 @@ class Iter
     protected:
 
     public:
-        //Constructors
-        Iter();
-
-        //Copy Constructor
-        Iter(const Iter& other);
-
-        //Destructor
-        ~Iter();
-
-        //Copy assignment operator
-        Iter& operator=(const Iter& other);
 
 };
 
