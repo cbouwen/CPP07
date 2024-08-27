@@ -2,27 +2,27 @@
 
 int main()
 {
-    Array<int>  arr3;
+    Array<int>  defaultArray;
    
     try
     {
-        Array<int> arr1(5);
-        for (unsigned int i = 0; i < arr1.size(); ++i)
+        Array<int> array1(5);
+        for (unsigned int i = 0; i < array1.size(); ++i)
         {
-            arr1[i] = i + 1;
+            array1[i] = i + 1;
         }
 
-        Array<int> arr2 = arr1;
-        arr2[0] = 35;
+        Array<int> array2 = array1;
+        array2[0] = 35;
 
-        for (unsigned int i = 0; i < arr1.size(); ++i)
+        for (unsigned int i = 0; i < array1.size(); ++i)
         {
-            std::cout << "arr1[" << i << "] = " << arr1[i] << std::endl;
+            std::cout << "array1[" << i << "] = " << array1[i] << std::endl;
         }
 
-        for (unsigned int i = 0; i < arr2.size(); ++i)
+        for (unsigned int i = 0; i < array2.size(); ++i)
         {
-            std::cout << "arr2[" << i << "] = " << arr2[i] << std::endl;
+            std::cout << "array2[" << i << "] = " << array2[i] << std::endl;
         }
     }
     catch (const std::exception& e)
@@ -32,9 +32,9 @@ int main()
 
     try
     {
-        Array<int> arr(5);
+        Array<int> array(5);
         std::cout << "Trying to access index 10" << std::endl;
-        std::cout << arr[10] << std::endl;
+        std::cout << array[10] << std::endl;
     }
     catch (const std::exception& e)
     {
